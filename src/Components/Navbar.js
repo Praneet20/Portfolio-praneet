@@ -3,7 +3,6 @@ import {AppBar, Toolbar, ListItem, IconButton, ListItemText, Avatar, Divider, Li
 import {ArrowBack, AssignmentInd, Home, Apps, ContactMail} from '@material-ui/icons';
 import avatar from './avatar.jpeg';
 import { makeStyles } from '@material-ui/core/styles';
-import App from '../App';
 import MobilRightMenuSlider from '@material-ui/core/Drawer';
 
 //CSS Styles
@@ -72,7 +71,7 @@ const Navbar = () => {
             <>
         <Box className={classes.menuSliderContainer} 
         component="div"
-        onClick={toggleSlider(slider, false)}>
+        onClick={toggleSlider(slider,false)}>
         <Avatar  className={classes.avatar} src={avatar} alt="Praneet Kaur"></Avatar>
         <Divider/>
         <List>
