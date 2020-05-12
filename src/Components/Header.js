@@ -13,12 +13,15 @@ avatar: {
 },
 
 title: {
+  
     color: "tomato"
+ 
 },
 
 subtitle: {
     color: "tan",
     marginBottom: "3rem"
+   
 },
 typedContainer: {
     position: "absolute",
@@ -38,16 +41,20 @@ const classes = useStyles()
     return (
         <Box className={classes.typedContainer}>
             <Grid container justify="center">
-<Avatar src={avatar} alt="Praneet Kaur" className={classes.avatar}/>
-</Grid>
-<Typography variant="h4" className={classes.title}>
-    <Typed strings={["Praneet Kaur"]} typeSpeed={40}/>
-</Typography>
-<br/>
-<Typography variant="h5" className={classes.subtitle}>
-    <Typed strings={["Web Designer", "Web Developer", "Content Manager"]} typeSpeed={40} backSpeed={40}/>
-</Typography>
-
+                <Avatar src={avatar} alt="Praneet Kaur" className={classes.avatar}/>
+            </Grid>
+            <Grid container justify="center">
+            <Typography variant="h4" className={classes.title}>
+                <Typed strings={["Praneet Kaur"]} typeSpeed={40}/>
+            </Typography>
+            </Grid>
+            <br/>
+            <Grid container justify="center">
+            <Typography variant="h5" className={classes.subtitle}>
+                <Typed strings={["Web Designer", "Web Developer", "Content Manager"]} typeSpeed={40} backSpeed={40}/>
+            </Typography>
+            </Grid>
+           
         </Box>
     )
 }
