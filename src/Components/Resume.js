@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 const useStyles = makeStyles(theme=>({
 
     mainContainer: {
-        backGround: "#233"
+        backGround: "tomato"
     },
 
     timeLine: {
@@ -37,6 +37,42 @@ const useStyles = makeStyles(theme=>({
         }
 
     },
+    timeLineItem:{
+     padding:"1rem",
+     borderBottom: "2px solid tan",
+     position:"relative",
+     margin:"1rem 3rem 1rem 1rem",
+     clear:"both",
+     "&:after" :{
+         content:"''",
+         position:"absolute"
+     },
+     "&:before" :{
+        content:"''",
+        position:"absolute",
+        right:"-0.625rem",
+        top:"calc(50%-5px)",
+        borderStyle: "solid",
+        borderColor: "tomato tomato transparent transparent",
+        borderWidth:"0.625rem",
+        transform: "rotate(45deg)"
+    },
+    [theme.breakpoints.up("md")]:{
+        width: "44%",
+            margin: "1rem",
+            "&:nth-of-type(2n)": {
+                float: "right",
+                margin: "1rem",
+                borderColor:"tan"
+            },
+            "&:nth-of-type(2n):before": {
+              right:"auto",
+              left:"-0.625rem",
+              boredColor:"transparent transparent tomato tomato"
+        }
+
+    } 
+    },
     timeLineYear:{
         textAlign: "center",
         maxWidth: "9.375rem",
@@ -64,7 +100,18 @@ const useStyles = makeStyles(theme=>({
                     diplay: "none"
             }
 
-        }}}
+        }}},
+        heading:{
+            color:"tomato",
+            padding:"3rem 0",
+            textTransform:"uppercase"
+        },
+        subHeading: {
+            color:"black",
+            padding:"0",
+            textTransform:"uppercase"
+        }
+
 }));
 
 const Resume = () => 
@@ -74,9 +121,28 @@ const Resume = () =>
 <>
 <Navbar/>
 <Box component="header" className={classes.mainContainer}>
-    <Typography variant="h4" align="center">Working Experience</Typography>
+    <Typography variant="h4" align="center" className={classes.heading}>Working Experience</Typography>
     <Box component="div" className={classes.timeLine}>
-    <Typography variant="h2" className={classes.timeLineYear}>2015</Typography>
+    <Typography variant="h2" 
+    className={`${classes.timeLineYear} ${classes.timeLineItem}`} >2015-19</Typography>
+    <Box component="div" className={classes.timeLineItem}> 
+    <Typography variant="h5" align="center">Web Designer</Typography>
+
+    <Typography variant="body1" align="center" className={classes.subHeading} style={{color:"tomato"}}>Ernst and Young</Typography>
+
+    <Typography variant="subtitle1" align="center">I have worked as Web Designer at EY for 4 years.</Typography>
+    </Box>
+</Box>
+<Box component="div" className={classes.timeLine}>
+    <Typography variant="h2" 
+    className={`${classes.timeLineYear} ${classes.timeLineItem}`} >2020</Typography>
+    <Box component="div" className={classes.timeLineItem}> 
+    <Typography variant="h5" align="center">IT Accountant Officer</Typography>
+
+    <Typography variant="body1" align="center" className={classes.subHeading} style={{color:"tomato"}}>CIBC</Typography>
+
+    <Typography variant="subtitle1" align="center">I have worked as Web Designer at EY for 4 years.</Typography>
+    </Box>
 </Box>
 </Box>
 
