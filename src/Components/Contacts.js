@@ -33,16 +33,16 @@ const Contacts = () => {
                     style={{ height: "100vh"}}
                 >
                     <Box>
-                        <Typography variant="h5" style={{ color: "tomato" }}>For more Projects please visit the below link:</Typography>
+                    <Grid><Typography variant="h5" style={{ color: "tomato" }}>For more Projects please visit the below link:</Typography>
 
-                        <a href="https://github.com/Praneet20" target="_blank" style={{ textDecoration: "none" }}><Button className={classes.button} variant="outlined" fullwidth={true} endIcon={<SendIcon />} align="center">Visit Github</Button></a>
+                        <a href="https://github.com/Praneet20" target="_blank" style={{ textDecoration: "none" }}><Button className={classes.button} variant="outlined" fullwidth={true} endIcon={<SendIcon />} align="center">Visit Github</Button></a></Grid>
 
                         <br /><br />
-                        <Typography variant="h5" style={{ color: "tomato" }}> Contact me at +1 (647) 562-7929</Typography>
+                        <Grid><Typography variant="h5" style={{ color: "tomato" }}> Contact me at +1 (647) 562-7929</Typography>
                         <br />
                         <a href="https://www.linkedin.com/in/praneet-kaur-b6043b126/" target="_blank" style={{ textDecoration: "none" }}><Button className={classes.button} variant="outlined" fullwidth={true} endIcon={<SendIcon />} align="center">Contact me at LinkedIn</Button></a>
                         <br />
-                        <a href="mailto:prntkr13@gmail.com" target="_blank" style={{ textDecoration: "none" }}><Button className={classes.button} variant="outlined" fullwidth={true} endIcon={<SendIcon />} align="center">Contact me at Gmail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Button></a>
+                        <a href="mailto:prntkr13@gmail.com" target="_blank" style={{ textDecoration: "none" }}><Button className={classes.button} variant="outlined" fullwidth={true} endIcon={<SendIcon />} align="center">Contact me at Gmail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Button></a></Grid> 
                     </Box>
 
                 </Grid>
